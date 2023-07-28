@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        lable {
+               label "Built-in"
+               customWorkspace "/data/projects"
+}
+}
 
     stages {
         stage("install-apache") {
